@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANS SERVICES</title>
+    <style>
+       body {
+          background: url('C:\Users\itzsh\Documents\HTML ANS\bgsha.jpg') no-repeat center center fixed; 
+          background-size: cover;
+
+            font-family: Arial, sans-serif;
+            background-color: #1e201e;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: #000000;
+        color: #fff;
+        padding: 1rem 2rem;
+      }
+      nav ul {
+        display: flex;
+        list-style: none;
+        position: relative;
+      }
+
+      nav ul li {
+        margin: 0 1rem;
+        position: relative;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: #ff6600;
+        border: 2px solid #fff;
+        border-radius: 5px;
+      }
+
+      nav .cta-button {
+        padding: 0.5rem 1rem;
+        background: #e79e0c;
+        border: none;
+        color: #fff;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+
+      nav .cta-button:hover {
+        background: #ff6600;
+        transform: scale(1.05);
+      }
+      .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 300px;
+        background: #fff;
+        color: #313131;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        display: none;
+        z-index: 1000;
+      }
+
+      .dropdown li {
+        margin: 0;
+        padding: 0.5rem 1rem;
+      }
+
+      .dropdown li a {
+        color: #333;
+        text-decoration: none;
+        font-weight: 400;
+        transition: 0.3s ease;
+      } 
+      #scroll {
+        transition: transform 0.3s ease;
+      }
+
+      .dropdown li a:hover {
+        background: #aaaaaa;
+        color: #fff;
+      }
+
+      nav ul li:hover .dropdown {
+        display: block;
+      }
+
+      .about,
+      .services,
+      .contact,
+      .testimonials,
+      .portfolio,
+      .faq {
+        padding: 150px;
+        text-align: center;
+      }
+        .top-section {
+            text-align: center;
+            padding: 4em 2em;
+            background-color: #333;
+        }
+        .explore-courses{
+            padding: 0.5rem 1rem;
+        background: #e79e0c;
+        border: none;
+        color: #fff;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        }
+        .explore-courses:hover {
+        background: #ff6600;
+        transform: scale(1.05);
+      }
+        .services-section {
+            padding: 2em;
+            text-align: center;
+            background-color: #2a2b2a;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .service-card {
+            padding: 1em;
+            margin: 10px;
+            width: calc(33.33% - 20px);
+            background-color: #211f1f;
+            border-radius: 10px;
+            box-shadow: 0 0 10px orange;
+            text-align: center;
+        }
+        .service-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .service-card:hover {
+            background: #e37730;
+            transform: scale(1.05);
+            box-shadow: 0 0 15px orange;
+            transition: all 0.3s ease-in-out;
+        }
+            @media (max-width: 768px) {
+            .service-card {
+                width: 100%;
+            }
+        }
+        .testimonials {
+        padding: 2em;
+        text-align: center;
+        background-color: #333;
+        color: #fff;
+    }
+
+    .carousel {
+        position: relative;
+        overflow: hidden; /* Hides the items not currently displayed */
+        width: 100%;
+    }
+
+    .carousel-container {
+        display: flex;
+        width: 100%; /* Matches the container width */
+        animation: scroll 16s infinite ease-in-out;
+    }
+
+    .carousel-item {
+        flex: 0 0 97%; /* Each item takes full width of the container */
+        padding: 1.4em;
+        text-align: left;
+        background-color: #444;
+        margin-right: 1em;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+        margin-bottom: 1em;
+    }
+
+    /* Keyframes for auto-scroll with a 3-second pause at each testimonial */
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        18.75% {
+            transform: translateX(0); /* Pause on the first item */
+        }
+        25% {
+            transform: translateX(-100%);
+        }
+        43.75% {
+            transform: translateX(-100%); /* Pause on the second item */
+        }
+        50% {
+            transform: translateX(-200%);
+        }
+        68.75% {
+            transform: translateX(-200%); /* Pause on the third item */
+        }
+        75% {
+            transform: translateX(-300%);
+        }
+        93.75% {
+            transform: translateX(-300%); /* Pause on the fourth item */
+        }
+        100% {
+            transform: translateX(0); /* Reset to the first item */
+        }
+    }
+
+        .comments {
+            padding: 2em;
+            text-align: center;
+        }
+        .comments form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .comments textarea {
+            margin-bottom: 1em;
+            padding: 0.5em;
+            width: 50%;
+        }
+        .comments button {
+            padding: 0.5em 1em;
+            background-color: #555;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .comment-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .comment {
+            margin: 10px;
+            padding: 1em;
+            background-color: #2d2d2d;
+            border-radius: 10px;
+            width: 70%;
+        }
+        .contact-section {
+    padding: 0.5rem 0.6rem;
+    max-width: 700px;
+    height:500px;
+    margin: 2rem auto;
+    background: rgba(28, 28, 25, 0.7); /* Light gray-transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px orange;
+    text-align: center;
+    color: #333; /* Darker text for contrast */
+}
+
+.contact-section h2 {
+    width: auto;
+    margin-bottom: 1rem;
+    color: #f4eeee; /* Dark text for heading */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+.contact-form input,
+.contact-form textarea {
+    width: 95%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 3px solid #e29510;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* From Uiverse.io by Allyhere */ 
+.btn-submit{
+    --clr-font-main: hsla(0 0% 20% / 100);
+    --btn-bg-1: hsla(194 100% 69% / 1);
+    --btn-bg-2: hsla(217 100% 56% / 1);
+    --btn-bg-color: hsla(360 100% 100% / 1);
+    --radii: 0.5em;
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: var(--size, 1rem);
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(
+      325deg,
+      var(--btn-bg-2) 0%,
+      var(--btn-bg-1) 55%,
+      var(--btn-bg-2) 90%
+    );
+    border: none;
+    border-radius: var(--radii);
+    color: var(--btn-bg-color);
+    box-shadow:
+      0px 0px 20px rgba(71, 184, 255, 0.5),
+      0px 5px 5px -1px rgba(58, 125, 233, 0.25),
+      inset 4px 4px 8px rgba(175, 230, 255, 0.5),
+      inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+  }
+  
+  .btn-submit:hover {
+    background-position: right top;
+  }
+  
+  .btn-submit:is(:focus, :focus-visible, :active) {
+    outline: none;
+    box-shadow:
+      0 0 0 3px var(--btn-bg-color),
+      0 0 0 6px var(--btn-bg-2);
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .btn-submit{
+      transition: linear;
+    }
+  }
+  
+.message-sent,
+.message-error {
+    display: none;
+    margin-top: 1rem;
+}
+
+
+/* Map Section Styling */
+.map-section {
+    padding: 0.5rem 0.6rem;
+    background: #fff;
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 4px 10px orange;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.1); 
+}
+
+.map-section h2 {
+    margin-bottom: 1rem;
+    color:#fff; /* White text for "OUR LOCATION" */
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    
+}
+
+.map-container {
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+}
+
+/* Footer Styling */
+footer {
+    
+    color: #fff;
+    text-align: center;
+    
+}
+
+        footer {
+            padding: 0.5em;
+            text-align: center;
+            background-color: #333;
+        }
+        footer .social-media a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo" style="color: #fff">
+          <h2>ANS TECHNOLOGICAL SOLUTIONS</h2>
+        </div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li>
+            <a href="#">Services</a>
+            
+          <li><a href="#">Blog</a></li>
+          <li>
+            <a href="#contactnav" id="scroll" onclick="scrollDown()">Contact Us</a>
+          </li>
+        </ul>
+        <button
+          class="cta-button" id="book" ><a href="https://docs.google.com/forms/d/e/1FAIpQLScwArtFuYQj8Y5lDQ7IwPa9BLEV1lT5zDq92QRCiC-Fmjqhaw/viewform?usp=sharing">
+          Book an Appointment</a></button>
+      </nav>
+    <main>
+        <section class="top-section">
+            <h1>Transform Your Career with Our Courses</h1>
+            <p>Learn in-demand skills and take your career to the next level</p>
+            <button class="explore-courses"><a href="https://docs.google.com/forms/d/e/1FAIpQLScwArtFuYQj8Y5lDQ7IwPa9BLEV1lT5zDq92QRCiC-Fmjqhaw/viewform?usp=sharing">
+                Explore Courses</a></button>
+        </section>
+        <section class="services-section">
+            <h2>Our Services</h2>
+            <div class="services">
+                <div class="service-card">
+                    <img src="software.jpg" alt="Software Courses">
+                    <h3>Software Courses</h3>
+                    <p>Learn Python, Java, and Data Science with expert guidance.</p>
+                </div>
+                <div class="service-card">
+                    <img src="webdevelopment.jpg" alt="Web Development">
+                    <h3>Web Development</h3>
+                    <p>Build modern, responsive websites using the latest technologies.</p>
+                </div>
+                <div class="service-card">
+                    <img src="mobileappdevelopment.jpeg" alt="Mobile App Development">
+                    <h3>Mobile App Development</h3>
+                    <p>Create powerful mobile applications for Android and iOS.</p>
+                </div>
+                <div class="service-card">
+                    <img src="digitalmarketing.jpeg" alt="Digital Marketing">
+                    <h3>Digital Marketing</h3>
+                    <p>Enhance your brand presence with our comprehensive digital marketing services.</p>
+                </div>
+                <div class="service-card">
+                    <img src="uiux.jpeg" alt="UI/UX Design">
+                    <h3>UI/UX Design</h3>
+                    <p>Design user-friendly and engaging interfaces for websites and apps.</p>
+                </div>
+            </div>
+        </section>
+        <section class="testimonials">
+            <h2>What Our Students Say</h2>
+            <div class="carousel">
+                <div class="carousel-container">
+                    <div class="carousel-item">
+                        <p>Thanks to ANS Technological Solutions, I was able to create my first mobile app.</p>
+                        <h3>Ananya R.</h3>
+                    </div>
+                    <div class="carousel-item">
+                        <p>The Web Development course was fantastic. I learned everything from scratch.</p>
+                        <h3>Rohit</h3>
+                    </div>
+                    <div class="carousel-item">
+                        <p>The UI/UX design training helped me land a job as a designer.</p>
+                        <h3>Priya S.</h3>
+                    </div>
+                    <div class="carousel-item">
+                        <p>The mobile app they developed for us has exceeded our expectations. Highly recommend their services!</p>
+                        <h3>Harish.k</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="comments">
+            <h2>Leave a Comment</h2>
+            <form id="comments-form">
+                <textarea placeholder="Write a comment..." required></textarea>
+                <button type="submit">Post Comment</button>
+            </form>
+            <div class="comment-container"></div>
+        </section>
+    </main>
+    <main>
+        <!-- Contact Us Section -->
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <form id="contact-form" class="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required />
+                <input type="email" id="email" placeholder="Your Email" required />
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <!-- From Uiverse.io by Allyhere --> 
+<button class="btn-submit">Submit</button>
+
+            </form>
+            <div class="message-sent">Thank you for your message! We will get back to you soon.</div>
+            <div class="message-error">Oops! Something went wrong. Please try again later.</div>
+        </section>
+        <section class="map-section">
+            <h2>Our Location</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.2680217675306!2d80.03873787358629!3d12.825949418057908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f70d79722631%3A0x49afcd4648f94894!2sSRM%20Valliammai%20Engineering%20College!5e0!3m2!1sen!2sin!4v1737984376577!5m2!1sen!2sin" 
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+    <footer>
+        <div class="social-media">
+            <a href="#">LinkedIn</a>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+        </div>
+        <p>&copy; 2025 ANS Technological Solutions. All rights reserved.</p>
+    </footer>
+    <script>
+        let currentIndex = 0;
+        function showCarouselItem(index) {
+            document.querySelector('.carousel-container').style.transform = `translateX(-${index * 100}%)`;
+        }
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % 2;
+            showCarouselItem(currentIndex);
+        }, 3000);
+
+        document.getElementById("comments-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            let commentText = document.querySelector("textarea").value;
+            let commentBox = document.createElement("div");
+            commentBox.className = "comment";
+            commentBox.textContent = commentText;
+            document.querySelector(".comment-container").appendChild(commentBox);
+            document.querySelector("textarea").value = "";
+        });
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const messageSent = document.querySelector('.message-sent');
+    messageSent.style.display = 'block';
+    setTimeout(() => {
+        messageSent.style.display = 'none';
+    }, 3000);
+});
+    </script>
+</body>
+</html>
