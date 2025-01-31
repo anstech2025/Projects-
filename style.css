@@ -1,0 +1,177 @@
+       body {
+            font-family: Arial, sans-serif;
+            background-color: #1e201e;
+            color: #fff;
+            overflow-x: hidden;
+            transition: transform 0.3s ease;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            padding: 1em 2em;
+            transition: transform 0.3s ease;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            transition: transform 0.3s ease;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        
+        }
+    
+        nav ul li a:hover {
+            color: #ecdfcc;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            
+       }
+
+        nav ul li {
+            margin-right: 20px;
+
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: #fff;
+        }
+     
+        .book-appointment {
+            background-color: #fff;
+            color: #333;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease-out;
+            transition: transform 0.3s ease-in;
+        }
+        .book-appointment:hover{
+            transform: scale(1.05);
+
+        }
+        .top-section {
+            text-align: center;
+            padding: 4em 2em;
+            background-color: #333;
+        }
+        .top-section h1 {
+            font-size: 36px;
+        }
+        .top-section p {
+            margin: 1em 0;
+        }
+        .explore-courses {
+            background-color: #fff;
+            color: #333;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease-out;
+            transition: transform 0.3s ease-in;
+        }
+        .explore-courses:hover{
+            transform: scale(1.05);
+        }
+        .services-section {
+            padding: 2em;
+            background-color: #2a2b2a;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .service-card {
+            padding: 1em;
+            margin: 10px;
+            width: calc(33.33% - 20px);
+            background-color: #333;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s ease-out;
+            transition: transform 0.2s ease-in;
+        }
+        .service-card:hover{
+            transform: scale(1.05);
+        }
+        .service-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .testimonials {
+            padding: 2em;
+            text-align: center;
+            background-color: #333;
+        }
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+        }
+        .carousel-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-item {
+            flex: 0 0 98%;
+            padding: 1em;
+            text-align: center;
+            background-color: #444;
+            margin-right: 0.4em;
+            border-radius: 10px;
+        }
+        .comments {
+            padding: 2em;
+            text-align: center;
+        }
+        .comments form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .comments textarea {
+            margin-bottom: 1em;
+            padding: 0.5em;
+            width: 50%;
+        }
+        .comments button {
+            padding: 0.5em 1em;
+            background-color: #555;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .comment-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .comment {
+            margin: 10px;
+            padding: 1em;
+            background-color: #2d2d2d;
+            border-radius: 10px;
+            width: 70%;
+        }
+        footer {
+            padding: 0.1em;
+            text-align: center;
+            background-color: #333;
+            margin-top: 100px;
+        }
+        footer .social-media a {
+            margin-top: 100px;
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+        }
